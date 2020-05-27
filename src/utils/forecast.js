@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback("Try different location", undefined);
         } else {
-            callback(undefined, "It is currently " + body.current.temperature + " degrees and it feels like " + body.current.feelslike + " degrees."
+            callback(undefined, "It is currently " + body.current.temperature + " degrees and it feels like " + body.current.feelslike + " degrees. The humidity is " + body.current.humidity + " %."
             );
         }
     })
